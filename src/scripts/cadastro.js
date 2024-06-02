@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const registerForm = document.getElementById("registerForm");
   const closeButton = document.querySelector(".close-button");
   const modal = document.getElementById("modal");
-  const Button = document.getElementById("Button");
+  const button = document.getElementById("Button");
 
-  Button.addEventListener("click", () => {
+  button.addEventListener("click", () => {
     showModal(
       "Viagem Cadastrada com Sucesso!"
     );

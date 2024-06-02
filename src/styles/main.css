@@ -6,6 +6,8 @@
   gap: 10px;
 }
 
+
+
 .card {
   margin: 10px;
   height: 430px;
@@ -13,7 +15,7 @@
 
 .card img {
   width: 100%;
-  height: auto;
+  height: 50%;
 }
 
 .card button {
