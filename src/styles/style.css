@@ -1,0 +1,40 @@
+@import url(./header.css);
+@import url(./main.css);
+@import url(./footer.css);
+@import url(./busca.css);
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  font-family: "Noto Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #a3ccbb;
+}
+
+.btn_default {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+  background-color: #1a704c;
+  color: rgb(224, 220, 220);
+}
+
+.btn_default:hover {
+  background-color: #41ac7f;
+}
+
+#search span{
+    color: #1a704c;
+}

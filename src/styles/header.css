@@ -1,0 +1,32 @@
+header {
+  width: 100%;
+  padding: 28px 8%;
+  background-color: #a3ccbb;
+  box-shadow: 5px 1px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+#navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navLogo {
+  width: 60px;
+  height: auto;
+}
+
+#navList {
+  display: flex;
+  gap: 48px;
+  list-style: none;
+}
+
+.navItem a {
+  text-decoration: none;
+  color: #1a704c;
+}
