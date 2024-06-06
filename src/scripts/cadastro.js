@@ -2,13 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const registerForm = document.getElementById("registerForm");
   const closeButton = document.querySelector(".close-button");
   const modal = document.getElementById("modal");
-  const button = document.getElementById("Button");
-
-  button.addEventListener("click", () => {
-    showModal(
-      "Viagem Cadastrada com Sucesso!"
-    );
-  });
 
   // Handle form submission
   registerForm.addEventListener("submit", (e) => {
@@ -24,13 +17,43 @@ document.addEventListener("DOMContentLoaded", () => {
       coletaPlastico: registerForm.coletaPlastico.value,
     };
 
-    saveTrip(trip);
-    registerForm.reset();
+    if (validate) {
+      showModal("Viagem Cadastrada com Sucesso!");
+      saveTrip(trip);
+      registerForm.reset();
+    }
   });
 
-  function saveTrip(trip) {
+  function validate(viagen) {
+    let aux = true;
+
+    if (viagen.nome.trim() == "") {
+      aux = false;
+    }
+    if (viagen.email.trim() == "" || viagens.email.indexOf("@") < 0) {
+      aux = false;
+    }
+    if (viagen.destino.trim() == "") {
+      aux = false;
+    }
+    if (viagen.data.trim() == "") {
+      aux = false;
+    }
+    if (viagen.duracao.trim() == "") {
+      aux = false;
+    }
+    if (viagen.propostaViagem.trim() == "") {
+      aux = false;
+    }
+    if (viagen.coletaPlastico.trim() == "") {
+      aux = false;
+    }
+    return aux;
+  }
+
+  function saveTrip(viagen) {
     const viagens = getViagens();
-    viagens.push(trip);
+    viagens.push(viagen);
     localStorage.setItem("viagens", JSON.stringify(viagens));
   }
 
