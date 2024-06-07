@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <strong>Propósito:</strong> ${viagens.propostaViagem}<br>
                         <strong>Plástico Coletado:</strong> ${viagens.coletaPlastico} kg
                     </div>
-                    <button class="delete-button" >Excluir</button>
+                    <button class="delete-button btn_default" >Excluir</button>
                 `;
         const deleteButton = li.querySelector(".delete-button");
         deleteButton.addEventListener("click", () => {
